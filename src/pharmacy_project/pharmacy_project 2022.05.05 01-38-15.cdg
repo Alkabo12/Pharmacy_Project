@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="pharmacy_project">
+  <ClassDiagramComponents>
+    <Class name="Branches" package="pharmacy_project" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="name_Branchess" type="String" visibility="private"/>
+        <Field name="phone_Branchess" type="String" visibility="private"/>
+        <Field name="address_Branchess" type="String" visibility="private"/>
+        <Field name="salary_one_dayy" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name_Branches"/>
+          <Argument type="String" name="phone_Branches"/>
+          <Argument type="String" name="address_Branches"/>
+          <Argument type="double" name="salary_one_day"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setName_Branches" returnType="void" visibility="public">
+          <Argument type="String" name="name_Branches"/>
+        </Method>
+        <Method name="getPhone_Branches" returnType="String" visibility="public"/>
+        <Method name="setPhone_Branches" returnType="void" visibility="public">
+          <Argument type="String" name="phone_Branches"/>
+        </Method>
+        <Method name="getAddress_Branches" returnType="String" visibility="public"/>
+        <Method name="Get_Name" returnType="String" visibility="public"/>
+        <Method name="setAddress_Branches" returnType="void" visibility="public">
+          <Argument type="String" name="address_Branches"/>
+        </Method>
+        <Method name="getSalary_one_day" returnType="double" visibility="public"/>
+        <Method name="getsalary_monthly" returnType="double" visibility="public"/>
+        <Method name="setSalary_one_day" returnType="void" visibility="public">
+          <Argument type="double" name="salary_one_day"/>
+        </Method>
+        <Method name="buying" returnType="double" visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="buying" returnType="double" visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="double" name="z"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Configs" package="pharmacy_project" visibility="public" xPosition="659.0" yPosition="483.0">
+      <Fields>
+        <Field name="dbhost" type="String" visibility="protected"/>
+        <Field name="dbport" type="String" visibility="protected"/>
+        <Field name="dbuser" type="String" visibility="protected"/>
+        <Field name="dbpass" type="String" visibility="protected"/>
+        <Field name="dbname" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Customer" package="pharmacy_project" visibility="public" xPosition="215.0" yPosition="497.0">
+      <Fields>
+        <Field name="name_customer" type="String" visibility="private"/>
+        <Field name="user" type="Scanner" visibility="public"/>
+        <Field name="number_customer" type="String" visibility="private"/>
+        <Field name="address_customer" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Get_name" returnType="String" visibility="public"/>
+        <Method name="setName_customer" returnType="void" visibility="public">
+          <Argument type="String" name="name_customer"/>
+        </Method>
+        <Method name="getNumber_customer" returnType="String" visibility="public"/>
+        <Method name="setNumber_customer" returnType="void" visibility="public">
+          <Argument type="String" name="number_customer"/>
+        </Method>
+        <Method name="getAddress_customer" returnType="String" visibility="public"/>
+        <Method name="setAddress_customer" returnType="void" visibility="public">
+          <Argument type="String" name="address_customer"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="start2" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="daily_employee" package="pharmacy_project" visibility="public" xPosition="2044.0" yPosition="340.0">
+      <Fields>
+        <Field name="Number_days" type="int" visibility="private"/>
+        <Field name="price_per_day" type="double" visibility="private"/>
+        <Field name="ponas_daily" type="double" visibility="private"/>
+        <Field name="day_losing_for_daily" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPonas_daily" returnType="double" visibility="public"/>
+        <Method name="setPonas_daily" returnType="void" visibility="public">
+          <Argument type="double" name="ponas_daily"/>
+        </Method>
+        <Method name="getDay_losing_for_daily" returnType="int" visibility="public"/>
+        <Method name="setDay_losing_for_daily" returnType="void" visibility="public">
+          <Argument type="int" name="day_losing"/>
+        </Method>
+        <Method name="getNumber_days" returnType="int" visibility="public"/>
+        <Method name="setNumber_days" returnType="void" visibility="public">
+          <Argument type="int" name="Number_days"/>
+        </Method>
+        <Method name="getPrice_per_day" returnType="double" visibility="public"/>
+        <Method name="setPrice_per_day" returnType="void" visibility="public">
+          <Argument type="double" name="price_per_day"/>
+        </Method>
+        <Method name="print_all_data" returnType="void" visibility="public"/>
+        <Method name="start" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DBHandler" package="pharmacy_project" visibility="public" xPosition="659.0" yPosition="49.0">
+      <Fields>
+        <Field name="connection" type="Connection" visibility="private"/>
+        <Field name="handler" type="DBHandler" visibility="private"/>
+        <Field name="pst" type="PreparedStatement" visibility="private"/>
+        <Field name="rs" type="ResultSet" visibility="private"/>
+        <Field name="statment" type="Statement" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="//test connection Connection" visibility="public"/>
+        <Method name="customer" returnType="//input in a table customer in database void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phone_number"/>
+        </Method>
+        <Method name="medicine" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="price"/>
+          <Argument type="String" name="Quantity"/>
+          <Argument type="String" name="company"/>
+        </Method>
+        <Method name="daily" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phone_number"/>
+          <Argument type="String" name="age"/>
+          <Argument type="String" name="number_days"/>
+          <Argument type="String" name="day_losing"/>
+          <Argument type="String" name="salary"/>
+          <Argument type="String" name="pons"/>
+          <Argument type="String" name="graduate"/>
+        </Method>
+        <Method name="monthly" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="age"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phone_number"/>
+          <Argument type="String" name="salary"/>
+          <Argument type="String" name="ponas"/>
+          <Argument type="String" name="day_losing"/>
+        </Method>
+        <Method name="hourly" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="age"/>
+          <Argument type="String" name="number_hours"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phone_number"/>
+          <Argument type="String" name="salary"/>
+          <Argument type="String" name="graduate"/>
+        </Method>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="employee" package="pharmacy_project" visibility="public" xPosition="2339.0" yPosition="360.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+        <Field name="graduate" type="boolean" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="phone_number" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAge" returnType="int" visibility="public"/>
+        <Method name="setAge" returnType="void" visibility="public">
+          <Argument type="int" name="age"/>
+        </Method>
+        <Method name="isGraduate" returnType="boolean" visibility="public"/>
+        <Method name="setGraduate" returnType="void" visibility="public">
+          <Argument type="boolean" name="graduate"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getPhone_number" returnType="String" visibility="public"/>
+        <Method name="setPhone_number" returnType="void" visibility="public">
+          <Argument type="String" name="phone_number"/>
+        </Method>
+        <Method name="print_all_data" returnType="void" visibility="public"/>
+        <Method name="start" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXMLDocumentController" package="pharmacy_project" visibility="public" xPosition="1554.0" yPosition="20.0">
+      <Fields>
+        <Field name="connection" type="Connection" visibility="private"/>
+        <Field name="handler" type="DBHandler" visibility="private"/>
+        <Field name="pst" type="PreparedStatement" visibility="private"/>
+        <Field name="rs" type="ResultSet" visibility="private"/>
+        <Field name="statment" type="Statement" visibility="private"/>
+        <Field name="username" type="TextField" visibility="package"/>
+        <Field name="password" type="PasswordField" visibility="package"/>
+        <Field name="login" type="Button" visibility="package"/>
+        <Field name="run_medicine" type="Label" visibility="package"/>
+        <Field name="run_customer" type="Label" visibility="package"/>
+        <Field name="run_daily" type="Label" visibility="package"/>
+        <Field name="run_hourly" type="Label" visibility="package"/>
+        <Field name="run_monthly" type="Label" visibility="package"/>
+        <Field name="faild_username" type="Label" visibility="package"/>
+        <Field name="faild_password" type="Label" visibility="package"/>
+        <Field name="customer" type="Button" visibility="package"/>
+        <Field name="medicine" type="Button" visibility="package"/>
+        <Field name="login_signup" type="Button" visibility="package"/>
+        <Field name="employee" type="Button" visibility="package"/>
+        <Field name="daily" type="Button" visibility="package"/>
+        <Field name="hourly" type="Button" visibility="package"/>
+        <Field name="monthly" type="Button" visibility="package"/>
+        <Field name="name_customer" type="TextField" visibility="package"/>
+        <Field name="address_customer" type="TextField" visibility="package"/>
+        <Field name="phone_customer" type="TextField" visibility="package"/>
+        <Field name="name_medicine" type="TextField" visibility="package"/>
+        <Field name="price_medicine" type="TextField" visibility="package"/>
+        <Field name="quantity_medicine" type="TextField" visibility="package"/>
+        <Field name="company_medicine" type="TextField" visibility="package"/>
+        <Field name="name_daily" type="TextField" visibility="package"/>
+        <Field name="address_daily" type="TextField" visibility="package"/>
+        <Field name="phone_daily" type="TextField" visibility="package"/>
+        <Field name="age_daily" type="TextField" visibility="package"/>
+        <Field name="number_day_daily" type="TextField" visibility="package"/>
+        <Field name="day_losing_daily" type="TextField" visibility="package"/>
+        <Field name="salary_daily" type="TextField" visibility="package"/>
+        <Field name="ponas_daily" type="TextField" visibility="package"/>
+        <Field name="graduate_daily" type="TextField" visibility="package"/>
+        <Field name="name_monthly" type="TextField" visibility="package"/>
+        <Field name="address_monthly" type="TextField" visibility="package"/>
+        <Field name="phone_monthly" type="TextField" visibility="package"/>
+        <Field name="age_monthly" type="TextField" visibility="package"/>
+        <Field name="ponas_monthly" type="TextField" visibility="package"/>
+        <Field name="day_losing_monthly" type="TextField" visibility="package"/>
+        <Field name="salary_monthly" type="TextField" visibility="package"/>
+        <Field name="name_hourly" type="TextField" visibility="package"/>
+        <Field name="address_hourly" type="TextField" visibility="package"/>
+        <Field name="phone_hourly" type="TextField" visibility="package"/>
+        <Field name="age_hourly" type="TextField" visibility="package"/>
+        <Field name="number_hours_hourly" type="TextField" visibility="package"/>
+        <Field name="graduate_hourly" type="TextField" visibility="package"/>
+        <Field name="salary_hourly" type="TextField" visibility="package"/>
+        <Field name="emp" type="Button" visibility="package"/>
+        <Field name="back_daily" type="Button" visibility="package"/>
+        <Field name="back_hourly" type="Button" visibility="package"/>
+        <Field name="back_monthly" type="Button" visibility="package"/>
+        <Field name="back_options_emp" type="Button" visibility="package"/>
+        <Field name="back_signup_emp" type="Button" visibility="package"/>
+        <Field name="customer2" type="Button" visibility="package"/>
+        <Field name="medicine2" type="Button" visibility="package"/>
+        <Field name="back_medicine2" type="Button" visibility="package"/>
+        <Field name="back_customer2" type="Button" visibility="package"/>
+        <Field name="back_customer" type="Button" visibility="package"/>
+        <Field name="back_medicine" type="Button" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="handleButtonAction" returnType="//to run fisrt window (login) void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_medicine" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_medicine2" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="medicine2" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_customer" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_customer2" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="cusomer2" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_daily" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_hourly" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_monthly" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_signup_emp" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="back_options_emp" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="login" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="options" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="customer" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="medicine" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="network" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="server" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="client" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="employee" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="daily" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="hourly" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="monthly" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="signUp_customer" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="signUp_medicine" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="signUp_daily" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="signUp_monthly" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="signUp_hourly" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="hourly_employee" package="pharmacy_project" visibility="public" xPosition="1981.0" yPosition="725.0">
+      <Fields>
+        <Field name="Number_hours" type="int" visibility="private"/>
+        <Field name="user" type="Scanner" visibility="public"/>
+        <Field name="salarey_hours" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNumber_hours" returnType="int" visibility="public"/>
+        <Method name="setNumber_hours" returnType="void" visibility="public">
+          <Argument type="int" name="Number_hours"/>
+        </Method>
+        <Method name="getSalarey_hours" returnType="double" visibility="public"/>
+        <Method name="setSalarey_hours" returnType="void" visibility="public">
+          <Argument type="double" name="salarey_hours"/>
+        </Method>
+        <Method name="print_all_data" returnType="void" visibility="public"/>
+        <Method name="start" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Medicine" package="pharmacy_project" visibility="public" xPosition="594.0" yPosition="719.0">
+      <Fields>
+        <Field name="user" type="Scanner" visibility="public"/>
+        <Field name="name_medicine" type="String" visibility="private"/>
+        <Field name="company" type="String" visibility="private"/>
+        <Field name="price_medicine" type="double" visibility="private"/>
+        <Field name="quantity" type="int" visibility="private"/>
+        <Field name="EXP_date" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name_medicine"/>
+          <Argument type="double" name="price_medicine"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Get_name" returnType="String" visibility="public"/>
+        <Method name="setName_medicine" returnType="void" visibility="public">
+          <Argument type="String" name="name_medicine"/>
+        </Method>
+        <Method name="getCompany" returnType="String" visibility="public"/>
+        <Method name="setCompany" returnType="void" visibility="public">
+          <Argument type="String" name="company"/>
+        </Method>
+        <Method name="getPrice_medicine" returnType="double" visibility="public"/>
+        <Method name="setPrice_medicine" returnType="void" visibility="public">
+          <Argument type="double" name="price_medicine"/>
+        </Method>
+        <Method name="getQuantity" returnType="int" visibility="public"/>
+        <Method name="setQuantity" returnType="void" visibility="public">
+          <Argument type="int" name="quantity"/>
+        </Method>
+        <Method name="getEXP_date" returnType="String" visibility="public"/>
+        <Method name="setEXP_date" returnType="void" visibility="public">
+          <Argument type="String" name="EXP_date"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="start2" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Monthly_employee" package="pharmacy_project" visibility="public" xPosition="2265.0" yPosition="814.0">
+      <Fields>
+        <Field name="salary_monthly" type="double" visibility="private"/>
+        <Field name="user" type="Scanner" visibility="public"/>
+        <Field name="day_losing_for_monthly" type="int" visibility="private"/>
+        <Field name="ponas_manthly" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getSalary_monthly" returnType="double" visibility="public"/>
+        <Method name="setSalary_monthly" returnType="void" visibility="public">
+          <Argument type="double" name="salary_monthly"/>
+        </Method>
+        <Method name="getDay_losing_for_monthly" returnType="int" visibility="public"/>
+        <Method name="setDay_losing_for_monthly" returnType="void" visibility="public">
+          <Argument type="int" name="day_losing_for_monthly"/>
+        </Method>
+        <Method name="getPonas_manthly" returnType="double" visibility="public"/>
+        <Method name="setPonas_manthly" returnType="void" visibility="public">
+          <Argument type="double" name="ponas_manthly"/>
+        </Method>
+        <Method name="print_all_data" returnType="void" visibility="public"/>
+        <Method name="start" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="options" package="pharmacy_project" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="start_login" returnType="void" visibility="public"/>
+        <Method name="login" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Owner" package="pharmacy_project" visibility="public" xPosition="996.0" yPosition="420.0">
+      <Fields>
+        <Field name="name_owner" type="String" visibility="private"/>
+        <Field name="revenue" type="double" visibility="private"/>
+        <Field name="address_owner" type="String" visibility="private"/>
+        <Field name="phone_owner" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name_owner"/>
+          <Argument type="double" name="revenue"/>
+          <Argument type="String" name="address_owner"/>
+          <Argument type="String" name="phone_owner"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName_owner" returnType="String" visibility="public"/>
+        <Method name="setName_owner" returnType="void" visibility="public">
+          <Argument type="String" name="name_owner"/>
+        </Method>
+        <Method name="getRevenue" returnType="double" visibility="public"/>
+        <Method name="setRevenue" returnType="void" visibility="public">
+          <Argument type="double" name="revenue"/>
+        </Method>
+        <Method name="getAddress_owner" returnType="String" visibility="public"/>
+        <Method name="setAddress_owner" returnType="void" visibility="public">
+          <Argument type="String" name="address_owner"/>
+        </Method>
+        <Method name="getPhone_owner" returnType="String" visibility="public"/>
+        <Method name="setPhone_owner" returnType="void" visibility="public">
+          <Argument type="String" name="phone_owner"/>
+        </Method>
+        <Method name="getsalary_monthly" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pharmacy" package="pharmacy_project" visibility="public" xPosition="1012.0" yPosition="814.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="time_open" type="double" visibility="private"/>
+        <Field name="time_clsoe" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="time_open"/>
+          <Argument type="double" name="time_clsoe"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getTime_open" returnType="double" visibility="public"/>
+        <Method name="setTime_open" returnType="void" visibility="public">
+          <Argument type="double" name="time_open"/>
+        </Method>
+        <Method name="getTime_clsoe" returnType="double" visibility="public"/>
+        <Method name="setTime_clsoe" returnType="void" visibility="public">
+          <Argument type="double" name="time_clsoe"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="pharmacy_project" package="pharmacy_project" visibility="public" xPosition="2208.0" yPosition="39.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RunnableLogic" package="pharmacy_project" visibility="public" xPosition="2456.0" yPosition="20.0">
+      <Fields>
+        <Field name="socket" type="Socket" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Socket" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Test_emp" package="pharmacy_project" visibility="public" xPosition="2012.0" yPosition="32.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="getNumber_customer" package="pharmacy_project" visibility="public" xPosition="-36.0" yPosition="617.0">
+      <Methods>
+        <Method name="getNumber_customer" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Get_name" package="pharmacy_project" visibility="public" xPosition="4.0" yPosition="459.0">
+      <Methods>
+        <Method name="Get_name" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pharmacy_project.Customer" target="pharmacy_project.getNumber_customer"/>
+    <IsRelation name="is" source="pharmacy_project.Monthly_employee" target="pharmacy_project.employee"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pharmacy_project.Customer" target="pharmacy_project.Get_name"/>
+    <IsRelation name="is" source="pharmacy_project.hourly_employee" target="pharmacy_project.employee"/>
+    <HasRelation name="handler" source="pharmacy_project.FXMLDocumentController" target="pharmacy_project.DBHandler" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="handler" source="pharmacy_project.DBHandler" target="pharmacy_project.DBHandler" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="pharmacy_project.Owner" target="pharmacy_project.Branches"/>
+    <IsRelation name="is" source="pharmacy_project.DBHandler" target="pharmacy_project.Configs"/>
+    <IsRelation name="is" source="pharmacy_project.daily_employee" target="pharmacy_project.employee"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

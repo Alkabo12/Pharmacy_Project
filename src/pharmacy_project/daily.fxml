@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy_project.FXMLDocumentController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label fx:id="run_daily" onDragDetected="#handleButtonAction" prefHeight="54.0" prefWidth="406.0" textFill="#0b44ff">
+               <HBox.margin>
+                  <Insets left="450.0" top="500.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+         </children></HBox>
+      <Label layoutX="234.0" prefHeight="50.0" prefWidth="294.0" text="data of daily employee" textFill="RED" AnchorPane.leftAnchor="234.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label text="Name" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="90.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name_daily" layoutY="84.0" prefHeight="36.0" prefWidth="504.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="84.0" />
+      <Label prefHeight="30.0" prefWidth="137.0" text="Phone Number" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phone_daily" layoutY="190.0" prefHeight="36.0" prefWidth="466.0" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="170.0" />
+      <Label layoutY="288.0" prefHeight="32.0" prefWidth="90.0" text="Address" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address_daily" layoutY="280.0" prefHeight="36.0" prefWidth="466.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="250.0" />
+      <Label layoutX="12.0" prefHeight="36.0" prefWidth="162.0" text="Working Days" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="number_day_daily" layoutX="163.0" layoutY="384.0" prefHeight="40.0" prefWidth="123.0" AnchorPane.leftAnchor="163.0" AnchorPane.topAnchor="320.0" />
+      <Label prefHeight="36.0" prefWidth="154.0" text="Losing Days" AnchorPane.rightAnchor="262.0" AnchorPane.topAnchor="320.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="day_losing_daily" layoutY="316.0" prefHeight="36.0" prefWidth="123.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="316.0" />
+      <TextField fx:id="ponas_daily" layoutX="163.0" layoutY="376.0" prefHeight="40.0" prefWidth="123.0" AnchorPane.leftAnchor="163.0" AnchorPane.topAnchor="376.0" />
+      <Label layoutX="28.0" prefHeight="40.0" prefWidth="73.0" text="Pons" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="380.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutY="367.0" prefHeight="40.0" prefWidth="114.0" text="Salary" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="367.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="salary_daily" layoutY="450.0" prefHeight="40.0" prefWidth="123.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="370.0" />
+      <Label layoutX="352.0" layoutY="424.0" prefHeight="40.0" prefWidth="123.0" text="Graduate" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="430.0" AnchorPane.topAnchor="424.0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="graduate_daily" layoutY="427.0" prefHeight="36.0" prefWidth="123.0" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="540.0" AnchorPane.topAnchor="427.0" />
+      <Button mnemonicParsing="false" onAction="#signUp_daily" prefHeight="50.0" prefWidth="162.0" text="save" textFill="#ff0101" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="300.0">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Button>
+      <Label layoutX="90.0" prefHeight="36.0" prefWidth="66.0" text="age" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="90.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="age_daily" layoutX="162.0" prefHeight="40.0" prefWidth="123.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="162.0" />
+      <Button fx:id="back_daily" mnemonicParsing="false" onAction="#back_daily" prefHeight="32.0" prefWidth="73.0" text="back" textFill="#00acff" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
